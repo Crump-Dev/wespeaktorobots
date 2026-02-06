@@ -7,6 +7,84 @@
   <meta name="description" content="Meet the team behind WeSpeakToRobots.ai - experts in AI, business strategy, and technology helping your organisation thrive.">
   <link rel="icon" href="images/logo.png">
   <link rel="stylesheet" href="css/styles.css?v=4">
+  <style>
+    .team-heading { text-align: center; margin-bottom: 4rem; }
+    .team-heading h1 { font-weight: 900; font-size: 3rem; margin-bottom: 1rem; }
+    @media (min-width: 768px) { .team-heading h1 { font-size: 5rem; } }
+    .team-heading p { color: rgba(255,255,255,0.6); font-weight: 300; font-size: 1.125rem; max-width: 700px; margin: 0 auto; }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 1024px) {
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .team-card {
+      background: var(--surfacedark);
+      border-radius: 2rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: all 0.3s;
+    }
+    .team-card:hover {
+      border-color: rgba(80,250,158,0.3);
+      transform: translateY(-4px);
+    }
+
+    .team-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .team-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--background);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-info {
+      padding: 2rem;
+    }
+
+    .team-info h3 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 0.9375rem;
+      margin-bottom: 1rem;
+    }
+
+    .team-bio {
+      color: rgba(255,255,255,0.5);
+      font-weight: 300;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .team-link {
+      color: var(--primary);
+      font-weight: 400;
+      font-size: 0.9375rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s;
+    }
+    .team-link:hover { opacity: 0.7; }
+  </style>
 </head>
 <body>
 
@@ -36,67 +114,55 @@
     </nav>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
+  <!-- TEAM SECTION -->
+  <section class="section" style="padding-top:10rem;">
     <div class="container">
-      <h1>Our <span class="green">Team</span></h1>
-      <p>Meet the people behind WeSpeakToRobots.ai. We bring together expertise in AI, business strategy, and technology to help your organisation thrive.</p>
-    </div>
-  </section>
+      <div class="team-heading reveal">
+        <h1>Meet Our <span class="green">Team</span></h1>
+        <p>Our diverse team of experts brings together deep technical knowledge and real-world business experience.</p>
+      </div>
 
-  <!-- TEAM GRID -->
-  <section class="section">
-    <div class="container">
-      <div class="values-grid stagger">
+      <div class="team-grid">
 
-        <div class="value-card reveal" style="--i:0; text-align:center;">
-          <div style="width:120px;height:120px;border-radius:50%;background:var(--surfacedark);border:2px solid rgba(80,250,158,0.3);margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;">
-            <i data-lucide="user" style="width:3rem;height:3rem;color:rgba(255,255,255,0.3)"></i>
+        <!-- Mark Crump -->
+        <div class="team-card reveal" style="--i:0">
+          <img src="images/mark.jpg" alt="Mark Crump" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-photo-placeholder" style="display:none">
+            <i data-lucide="user" style="width:4rem;height:4rem;color:rgba(255,255,255,0.2)"></i>
           </div>
-          <h3 style="font-weight:700;font-size:1.5rem;margin-bottom:0.25rem;">Jack Roswell</h3>
-          <p style="color:#50FA9E;font-weight:500;font-size:0.9375rem;margin-bottom:1rem;">Co-Founder &amp; AI Strategist</p>
-          <p style="color:rgba(255,255,255,0.5);font-weight:300;line-height:1.7;margin-bottom:1.5rem;">Details coming soon.</p>
-          <div style="display:flex;gap:0.75rem;justify-content:center;">
-            <a href="mailto:jack@wespeaktorobots.ai" style="width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:all 0.2s;">
-              <i data-lucide="mail" style="width:1rem;height:1rem"></i>
-            </a>
-            <a href="#" style="width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:all 0.2s;">
-              <i data-lucide="linkedin" style="width:1rem;height:1rem"></i>
-            </a>
+          <div class="team-info">
+            <h3>Mark Crump</h3>
+            <p class="team-role">Senior AI Solutions Architect</p>
+            <p class="team-bio">Mark brings over 20 years of experience delivering transformative technology solutions across regulated industries. As CEO of PensionAble.ai and former CEO of LifeWorks, Mark specialises in unlocking modern capabilities from legacy systems &mdash; helping enterprises navigate complex technical transformations in highly regulated environments. His deep expertise in tech and business case development enables him to translate intricate technical challenges into practical, compliant AI strategies that drive measurable operational improvement.</p>
+            <a href="#" class="team-link">LinkedIn</a>
           </div>
         </div>
 
-        <div class="value-card reveal" style="--i:1; text-align:center;">
-          <div style="width:120px;height:120px;border-radius:50%;background:var(--surfacedark);border:2px solid rgba(80,250,158,0.3);margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;">
-            <i data-lucide="user" style="width:3rem;height:3rem;color:rgba(255,255,255,0.3)"></i>
+        <!-- Spencer Lynch -->
+        <div class="team-card reveal" style="--i:1">
+          <img src="images/spencer.jpg" alt="Spencer Lynch" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-photo-placeholder" style="display:none">
+            <i data-lucide="user" style="width:4rem;height:4rem;color:rgba(255,255,255,0.2)"></i>
           </div>
-          <h3 style="font-weight:700;font-size:1.5rem;margin-bottom:0.25rem;">Ziggy Roswell</h3>
-          <p style="color:#50FA9E;font-weight:500;font-size:0.9375rem;margin-bottom:1rem;">Co-Founder &amp; Technology Lead</p>
-          <p style="color:rgba(255,255,255,0.5);font-weight:300;line-height:1.7;margin-bottom:1.5rem;">Details coming soon.</p>
-          <div style="display:flex;gap:0.75rem;justify-content:center;">
-            <a href="mailto:ziggy@wespeaktorobots.ai" style="width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:all 0.2s;">
-              <i data-lucide="mail" style="width:1rem;height:1rem"></i>
-            </a>
-            <a href="#" style="width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:all 0.2s;">
-              <i data-lucide="linkedin" style="width:1rem;height:1rem"></i>
-            </a>
+          <div class="team-info">
+            <h3>Spencer Lynch</h3>
+            <p class="team-role">Chief Commercial Director</p>
+            <p class="team-bio">Spencer brings over 20 years of strategic sales leadership across regulated industries including financial services, wealth management, and pensions. His proven track record includes securing exclusive contracts exceeding &pound;100M in total contract value by identifying operational inefficiencies and translating them into innovative AI-driven solutions. Spencer excels at building C-suite relationships and crafting multi-channel strategies that deliver measurable revenue growth while reducing risk and enhancing customer experience.</p>
+            <a href="#" class="team-link">LinkedIn</a>
           </div>
         </div>
 
-        <div class="value-card reveal" style="--i:2; text-align:center;">
-          <div style="width:120px;height:120px;border-radius:50%;background:var(--surfacedark);border:2px solid rgba(80,250,158,0.3);margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;">
-            <i data-lucide="user" style="width:3rem;height:3rem;color:rgba(255,255,255,0.3)"></i>
+        <!-- Jack Crump -->
+        <div class="team-card reveal" style="--i:2">
+          <img src="images/jack.jpg" alt="Jack Crump" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-photo-placeholder" style="display:none">
+            <i data-lucide="user" style="width:4rem;height:4rem;color:rgba(255,255,255,0.2)"></i>
           </div>
-          <h3 style="font-weight:700;font-size:1.5rem;margin-bottom:0.25rem;">Spence</h3>
-          <p style="color:#50FA9E;font-weight:500;font-size:0.9375rem;margin-bottom:1rem;">Co-Founder &amp; Operations</p>
-          <p style="color:rgba(255,255,255,0.5);font-weight:300;line-height:1.7;margin-bottom:1.5rem;">Details coming soon.</p>
-          <div style="display:flex;gap:0.75rem;justify-content:center;">
-            <a href="mailto:hello@wespeaktorobots.ai" style="width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:all 0.2s;">
-              <i data-lucide="mail" style="width:1rem;height:1rem"></i>
-            </a>
-            <a href="#" style="width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:all 0.2s;">
-              <i data-lucide="linkedin" style="width:1rem;height:1rem"></i>
-            </a>
+          <div class="team-info">
+            <h3>Jack Crump</h3>
+            <p class="team-role">Lead Strategist</p>
+            <p class="team-bio">Jack is a hands-on AI solutions architect, designing and implementing cutting-edge AI systems for diverse industries. His passion lies in transforming complex business challenges into practical, scalable AI applications that drive efficiency and innovation.</p>
+            <a href="#" class="team-link">LinkedIn</a>
           </div>
         </div>
 
