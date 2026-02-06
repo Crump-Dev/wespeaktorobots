@@ -96,7 +96,7 @@ Applied via JS (`requestAnimationFrame`) after Lucide icons have loaded to preve
 | AI Native badge | `top: 15%; left: 20%` | Green pill, solid bg |
 | Mouse pointer | `top: 27%; right: 12%` | Blue, `3.25rem`, rotated -15deg |
 | Bot icon box | `bottom: 25%; left: 12%` | Frosted glass box, rotated 12deg |
-| Est. 2024 badge | `bottom: 15%; right: 12%` | Green outline pill |
+| Est. 2025 badge | `bottom: 15%; right: 12%` | Green outline pill |
 
 ### Hero Background
 Three concentric rotating circles:
@@ -169,5 +169,5 @@ All pages share: header (fixed, `5rem` height) + footer (4-column grid) + grain 
 ## Contact Details
 
 - **Display email:** jack@wespeaktorobots.ai
-- **mailto:** hello@wetalktorobots.ai
+- **mailto:** jack@wespeaktorobots.ai
 - Form currently uses mailto: link - replace with backend when on 123-reg
