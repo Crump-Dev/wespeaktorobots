@@ -392,7 +392,13 @@
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+  <script>
+    lucide.createIcons();
+    // Start floating animations AFTER Lucide has swapped the DOM
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.floating-item').forEach(el => el.classList.add('animated'));
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
