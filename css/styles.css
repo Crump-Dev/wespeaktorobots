@@ -424,9 +424,9 @@ ul { list-style: none; }
 
 /* Mobile floating item positions */
 @media (max-width: 767px) {
-  .fi-1 { left: 17%; }
-  .fi-2 { top: 29%; right: 10%; }
-  .fi-4 { bottom: 13%; right: 10%; }
+  .fi-1 { left: 12%; }
+  .fi-2 { top: 32%; right: 7%; }
+  .fi-4 { bottom: 10%; right: 7%; }
 }
 
 /* ── Hero Content ── */
