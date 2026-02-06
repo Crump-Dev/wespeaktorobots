@@ -422,6 +422,13 @@ ul { list-style: none; }
 }
 .fi-4.animated { animation: float-4 4s ease-in-out infinite; }
 
+/* Mobile floating item positions */
+@media (max-width: 767px) {
+  .fi-1 { left: 17%; }
+  .fi-2 { top: 29%; right: 10%; }
+  .fi-4 { bottom: 13%; right: 10%; }
+}
+
 /* ── Hero Content ── */
 .hero-content {
   position: relative;
