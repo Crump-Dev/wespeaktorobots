@@ -405,8 +405,8 @@ ul { list-style: none; }
 .fi-1.animated { animation: float-1 5s ease-in-out infinite; }
 
 .fi-2 {
-  top: 42%;
-  right: 22%;
+  top: 37%;
+  right: 18%;
 }
 .fi-2.animated { animation: float-2 4.5s ease-in-out infinite; }
 
@@ -1270,31 +1270,23 @@ ul { list-style: none; }
 }
 
 @keyframes float-1 {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(5px, -10px); }
-  50% { transform: translate(-3px, -15px); }
-  75% { transform: translate(4px, -6px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
 }
 
 @keyframes float-2 {
-  0%, 100% { transform: translate(0, 0) rotate(-15deg); }
-  25% { transform: translate(-12px, -36px) rotate(-15deg); }
-  50% { transform: translate(9px, -24px) rotate(-15deg); }
-  75% { transform: translate(-6px, -42px) rotate(-15deg); }
+  0%, 100% { transform: translateY(0) rotate(-15deg); }
+  50% { transform: translateY(-40px) rotate(-15deg); }
 }
 
 @keyframes float-3 {
-  0%, 100% { transform: translate(0, 0) rotate(12deg); }
-  25% { transform: translate(18px, -24px) rotate(14deg); }
-  50% { transform: translate(6px, -48px) rotate(10deg); }
-  75% { transform: translate(-12px, -30px) rotate(13deg); }
+  0%, 100% { transform: translateY(0) rotate(12deg); }
+  50% { transform: translateY(-45px) rotate(12deg); }
 }
 
 @keyframes float-4 {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(-15px, -33px); }
-  50% { transform: translate(12px, -42px); }
-  75% { transform: translate(-9px, -21px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
 }
 
 @keyframes fade-up {
