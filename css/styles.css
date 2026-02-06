@@ -426,7 +426,7 @@ ul { list-style: none; }
 @media (max-width: 767px) {
   .fi-1 { left: 12%; }
   .fi-2 { top: 32%; right: 7%; }
-  .fi-3 { left: 7%; }
+  .fi-3 { left: 4%; }
   .fi-4 { bottom: 10%; right: 7%; }
 }
 
