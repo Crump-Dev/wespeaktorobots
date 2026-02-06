@@ -396,7 +396,6 @@ ul { list-style: none; }
   backdrop-filter: blur(8px);
   border-radius: 1rem;
   border: 1px solid rgba(37, 87, 214, 0.5);
-  transform: rotate(12deg);
 }
 
 .fi-1 {
@@ -406,7 +405,7 @@ ul { list-style: none; }
 .fi-1.animated { animation: float-1 5s ease-in-out infinite; }
 
 .fi-2 {
-  top: 35%;
+  top: 42%;
   right: 22%;
 }
 .fi-2.animated { animation: float-2 4.5s ease-in-out infinite; }
@@ -1279,23 +1278,23 @@ ul { list-style: none; }
 
 @keyframes float-2 {
   0%, 100% { transform: translate(0, 0) rotate(-15deg); }
-  25% { transform: translate(-4px, -12px) rotate(-15deg); }
-  50% { transform: translate(3px, -8px) rotate(-15deg); }
-  75% { transform: translate(-2px, -14px) rotate(-15deg); }
+  25% { transform: translate(-12px, -36px) rotate(-15deg); }
+  50% { transform: translate(9px, -24px) rotate(-15deg); }
+  75% { transform: translate(-6px, -42px) rotate(-15deg); }
 }
 
 @keyframes float-3 {
   0%, 100% { transform: translate(0, 0) rotate(12deg); }
-  25% { transform: translate(6px, -8px) rotate(14deg); }
-  50% { transform: translate(2px, -16px) rotate(10deg); }
-  75% { transform: translate(-4px, -10px) rotate(13deg); }
+  25% { transform: translate(18px, -24px) rotate(14deg); }
+  50% { transform: translate(6px, -48px) rotate(10deg); }
+  75% { transform: translate(-12px, -30px) rotate(13deg); }
 }
 
 @keyframes float-4 {
   0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(-5px, -11px); }
-  50% { transform: translate(4px, -14px); }
-  75% { transform: translate(-3px, -7px); }
+  25% { transform: translate(-15px, -33px); }
+  50% { transform: translate(12px, -42px); }
+  75% { transform: translate(-9px, -21px); }
 }
 
 @keyframes fade-up {
