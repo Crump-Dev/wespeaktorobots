@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = form.querySelector('[name="message"]').value;
 
       const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-      const mailto = `mailto:hello@wespeaktorobots.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:jack@wespeaktorobots.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
       window.location.href = mailto;
 
