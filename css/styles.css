@@ -1619,10 +1619,9 @@ a[href*="spline.design"] {
 
 /* ── Mobile Overrides for Splines ── */
 @media (max-width: 767px) {
-  .hero-spline {
-    /* Scale down the top hero robot and push it to the right on mobile */
-    transform: scale(0.7) translateX(30%);
-    transform-origin: center right;
+  .hero-spline,
+  .spline-loader {
+    display: none !important;
   }
   
   .parallax-spline {

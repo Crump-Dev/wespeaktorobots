@@ -518,17 +518,22 @@
     const loader = document.getElementById('spline-loader');
 
     if (canvas) {
-      const spline = new Application(canvas);
-      // New Scene URL
-      const SCENE_URL = 'https://prod.spline.design/XtnSbszYxUBCLSJa/scene.splinecode';
+      if (window.innerWidth > 767) {
+        const spline = new Application(canvas);
+        // New Scene URL
+        const SCENE_URL = 'https://prod.spline.design/XtnSbszYxUBCLSJa/scene.splinecode';
 
-      spline.load(SCENE_URL).then(() => {
+        spline.load(SCENE_URL).then(() => {
+          if (loader) loader.classList.add('hidden');
+          canvas.classList.add('loaded');
+        }).catch(err => {
+          console.error('Failed to load Hero Spline scene:', err);
+          if (loader) loader.classList.add('hidden');
+        });
+      } else {
+        // Hide loader immediately on mobile since we aren't loading it
         if (loader) loader.classList.add('hidden');
-        canvas.classList.add('loaded');
-      }).catch(err => {
-        console.error('Failed to load Hero Spline scene:', err);
-        if (loader) loader.classList.add('hidden');
-      });
+      }
     }
 
     // Parallax Scene
