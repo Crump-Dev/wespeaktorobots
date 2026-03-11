@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeSpeakToRobots.ai — We talk to AI so you don't have to</title>
-  <meta name="description" content="We handle the AI so you can handle your business. Expert consulting that gives you more time, more money, and fewer headaches.">
+  <meta name="description"
+    content="We handle the AI so you can handle your business. Expert consulting that gives you more time, more money, and fewer headaches.">
   <link rel="icon" href="images/logo.png">
   <link rel="stylesheet" href="css/styles.css?v=8">
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -44,10 +47,16 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas3d" class="hero-spline"></canvas>
+    <div id="spline-loader" class="spline-loader">
+      <div class="spinner"></div>
+    </div>
+
     <div class="hero-circles">
-      <div class="hero-circle"></div>
-      <div class="hero-circle"></div>
-      <div class="hero-circle"></div>
+      <div class="hero-circle" style="opacity:0.1"></div>
+      <div class="hero-circle" style="opacity:0.1"></div>
+      <div class="hero-circle" style="opacity:0.1"></div>
       <div class="hero-gradient-overlay"></div>
     </div>
 
@@ -79,7 +88,8 @@
         More time. More money. Fewer headaches.
       </p>
       <div class="hero-buttons">
-        <a href="https://calendar.app.google/ACXKHWELmtuNpt1H7" target="_blank" rel="noopener" class="btn btn-lg btn-solid">Book a Free Chat</a>
+        <a href="https://calendar.app.google/ACXKHWELmtuNpt1H7" target="_blank" rel="noopener"
+          class="btn btn-lg btn-solid">Book a Free Chat</a>
         <a href="services.html" class="btn btn-lg btn-outline">See How We Help</a>
       </div>
     </div>
@@ -130,7 +140,8 @@
       <div class="reveal" style="text-align:center; margin-bottom:1rem;">
         <span class="section-label">What You Get</span>
         <h2 class="section-title">Your Business, <span class="green">Working Smarter</span></h2>
-        <p class="section-subtitle" style="margin:0 auto">We're the AI experts. But this isn't about us — it's about what that expertise does for your business.</p>
+        <p class="section-subtitle" style="margin:0 auto">We're the AI experts. But this isn't about us — it's about
+          what that expertise does for your business.</p>
       </div>
       <div class="advantage-grid stagger">
         <div class="advantage-card reveal" style="--i:0">
@@ -138,42 +149,48 @@
             <i data-lucide="clock" style="width:1.5rem;height:1.5rem;color:#50FA9E"></i>
           </div>
           <h3>Get Your Time Back</h3>
-          <p>Your team is spending hours on tasks a smart tool could handle in minutes. We automate the repetitive work so your people can focus on what they were actually hired to do.</p>
+          <p>Your team is spending hours on tasks a smart tool could handle in minutes. We automate the repetitive work
+            so your people can focus on what they were actually hired to do.</p>
         </div>
         <div class="advantage-card reveal" style="--i:1">
           <div class="icon-box bg-secondary-20">
             <i data-lucide="pound-sterling" style="width:1.5rem;height:1.5rem;color:#50FA9E"></i>
           </div>
           <h3>Cut Costs, Not Corners</h3>
-          <p>We find where your business is leaking money and fix it with smarter processes. No expensive consultants who talk in riddles.</p>
+          <p>We find where your business is leaking money and fix it with smarter processes. No expensive consultants
+            who talk in riddles.</p>
         </div>
         <div class="advantage-card reveal" style="--i:2">
           <div class="icon-box bg-brandaccent">
             <i data-lucide="zap" style="width:1.5rem;height:1.5rem;color:#0A0A0A"></i>
           </div>
           <h3>Up and Running Fast</h3>
-          <p>No six-month rollouts. Most businesses see real improvements within weeks. You'll wonder why you didn't do it sooner.</p>
+          <p>No six-month rollouts. Most businesses see real improvements within weeks. You'll wonder why you didn't do
+            it sooner.</p>
         </div>
         <div class="advantage-card reveal" style="--i:3">
           <div class="icon-box bg-primary-10">
             <i data-lucide="trending-up" style="width:1.5rem;height:1.5rem;color:#50FA9E"></i>
           </div>
           <h3>Grow Without Hiring</h3>
-          <p>Take on more work without taking on more staff. Smart tools scale with you, so your profits grow faster than your overheads.</p>
+          <p>Take on more work without taking on more staff. Smart tools scale with you, so your profits grow faster
+            than your overheads.</p>
         </div>
         <div class="advantage-card reveal" style="--i:4">
           <div class="icon-box bg-secondary-20">
             <i data-lucide="message-circle" style="width:1.5rem;height:1.5rem;color:#50FA9E"></i>
           </div>
           <h3>Plain English, Always</h3>
-          <p>We explain everything in terms you'll actually understand. If we can't put it simply, we haven't understood it well enough ourselves.</p>
+          <p>We explain everything in terms you'll actually understand. If we can't put it simply, we haven't understood
+            it well enough ourselves.</p>
         </div>
         <div class="advantage-card reveal" style="--i:5">
           <div class="icon-box bg-brandaccent">
             <i data-lucide="smile" style="width:1.5rem;height:1.5rem;color:#0A0A0A"></i>
           </div>
           <h3>Happier Customers Too</h3>
-          <p>Faster replies, fewer mistakes, better service. Your customers notice the difference even if they don't know how you did it.</p>
+          <p>Faster replies, fewer mistakes, better service. Your customers notice the difference even if they don't
+            know how you did it.</p>
         </div>
       </div>
     </div>
@@ -183,10 +200,14 @@
   <section class="parallax-section">
     <div class="parallax-bg" style="background-image:url('images/hero-bg.png')"></div>
     <div class="parallax-overlay"></div>
+
+    <!-- Spline Parallax Background -->
+    <canvas id="parallax-canvas3d" class="parallax-spline"></canvas>
+
     <div class="parallax-content reveal">
-      <i data-lucide="coffee" style="width:5rem;height:5rem;color:#50FA9E;display:block;margin:0 auto 2rem"></i>
       <h2 class="parallax-title">IMAGINE <span class="blue">THIS</span></h2>
-      <p class="parallax-sub">It's 2pm on Wednesday. You've cleared everything you expected to by Friday. What next? It's up to you.</p>
+      <p class="parallax-sub">It's 2pm on Wednesday. You've cleared everything you expected to by Friday. What next?
+        It's up to you.</p>
     </div>
   </section>
 
@@ -196,8 +217,10 @@
       <div class="services-split">
         <div class="services-sticky reveal-left">
           <h2 class="section-title section-title-xl">What We <span class="green">Do</span></h2>
-          <p>We look at how your business runs, find the parts that waste your time and money, and fix them with smart AI tools that just work.</p>
-          <a href="services.html" class="btn btn-lg btn-outline">See All Services <i data-lucide="arrow-right" style="width:1.25rem;height:1.25rem"></i></a>
+          <p>We look at how your business runs, find the parts that waste your time and money, and fix them with smart
+            AI tools that just work.</p>
+          <a href="services.html" class="btn btn-lg btn-outline">See All Services <i data-lucide="arrow-right"
+              style="width:1.25rem;height:1.25rem"></i></a>
         </div>
 
         <div>
@@ -205,22 +228,39 @@
             <div>
               <div class="service-number">01</div>
               <h3>AI Strategy</h3>
-              <p>We sit down with you, understand how your business works, and build a clear plan for where AI can save you time and money.</p>
+              <p>We sit down with you, understand how your business works, and build a clear plan for where AI can save
+                you time and money.</p>
               <div class="service-features">
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Honest Assessment</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Quick Win Spotting</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Clear Action Plan</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>No Obligation</span>
                 </div>
               </div>
@@ -234,22 +274,39 @@
             <div>
               <div class="service-number">02</div>
               <h3>Business Audit</h3>
-              <p>We look at every process in your operation and show you exactly what can be automated, streamlined, or done smarter.</p>
+              <p>We look at every process in your operation and show you exactly what can be automated, streamlined, or
+                done smarter.</p>
               <div class="service-features">
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Where Money Goes</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Where Time Goes</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>What Can Be Automated</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Priority Report</span>
                 </div>
               </div>
@@ -263,22 +320,39 @@
             <div>
               <div class="service-number">03</div>
               <h3>Implementation</h3>
-              <p>We build and install the tools, connect them to your existing systems, and make sure everything works before we hand over the keys.</p>
+              <p>We build and install the tools, connect them to your existing systems, and make sure everything works
+                before we hand over the keys.</p>
               <div class="service-features">
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Built Around You</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Works With What You've Got</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Fully Tested</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Ready to Go</span>
                 </div>
               </div>
@@ -292,22 +366,39 @@
             <div>
               <div class="service-number">04</div>
               <h3>Training &amp; Support</h3>
-              <p>We make sure you and your team can use everything we set up. And we're always a phone call away if you need us.</p>
+              <p>We make sure you and your team can use everything we set up. And we're always a phone call away if you
+                need us.</p>
               <div class="service-features">
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Hands-On Training</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Plain English Guides</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Ongoing Support</span>
                 </div>
                 <div class="service-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                   <span>Always Available</span>
                 </div>
               </div>
@@ -328,8 +419,10 @@
         <div class="cta-inner">
           <div class="cta-dots"></div>
           <h2 class="section-title reveal">Ready to <span class="green">Free Up All That Time?</span></h2>
-          <p class="reveal">A quick conversation is all it takes. We'll look at your business, tell you where the easy wins are, and you decide if it's worth doing. No hard sell, no obligation.</p>
-          <a href="https://calendar.app.google/ACXKHWELmtuNpt1H7" target="_blank" rel="noopener" class="btn btn-xl btn-primary reveal">Book a Free Chat</a>
+          <p class="reveal">A quick conversation is all it takes. We'll look at your business, tell you where the easy
+            wins are, and you decide if it's worth doing. No hard sell, no obligation.</p>
+          <a href="https://calendar.app.google/ACXKHWELmtuNpt1H7" target="_blank" rel="noopener"
+            class="btn btn-xl btn-primary reveal">Book a Free Chat</a>
         </div>
       </div>
     </div>
@@ -343,7 +436,8 @@
           <div class="logo" style="margin-bottom:0.5rem">
             <span>WeSpeakToRobots<span class="ai">.ai</span></span>
           </div>
-          <p>We're AI experts who help businesses work smarter — saving you time, money, and headaches so you can focus on what actually matters.</p>
+          <p>We're AI experts who help businesses work smarter — saving you time, money, and headaches so you can focus
+            on what actually matters.</p>
         </div>
 
         <div>
@@ -371,17 +465,23 @@
         <div>
           <h4 class="footer-heading">Connect</h4>
           <div class="footer-social">
-            <a href="mailto:jack@wespeaktorobots.ai" aria-label="Email"><i data-lucide="mail" style="width:1.125rem;height:1.125rem"></i></a>
-            <a href="https://www.linkedin.com/company/wespeaktorobots/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:1.125rem;height:1.125rem"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i data-lucide="twitter" style="width:1.125rem;height:1.125rem"></i></a>
+            <a href="mailto:jack@wespeaktorobots.ai" aria-label="Email"><i data-lucide="mail"
+                style="width:1.125rem;height:1.125rem"></i></a>
+            <a href="https://www.linkedin.com/company/wespeaktorobots/" target="_blank" rel="noopener"
+              aria-label="LinkedIn"><i data-lucide="linkedin" style="width:1.125rem;height:1.125rem"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i data-lucide="twitter"
+                style="width:1.125rem;height:1.125rem"></i></a>
           </div>
           <p style="color:rgba(255,255,255,0.5);font-weight:300;margin-bottom:1rem">Ready to get your time back?</p>
-          <a href="https://calendar.app.google/ACXKHWELmtuNpt1H7" target="_blank" rel="noopener" class="btn btn-lg btn-primary" style="width:100%">Book a Free Chat</a>
+          <a href="https://calendar.app.google/ACXKHWELmtuNpt1H7" target="_blank" rel="noopener"
+            class="btn btn-lg btn-primary" style="width:100%">Book a Free Chat</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; <script>document.write(new Date().getFullYear())</script> WeSpeakToRobots.ai. All rights reserved.</span>
+        <span>&copy;
+          <script>document.write(new Date().getFullYear())</script> WeSpeakToRobots.ai. All rights reserved.
+        </span>
         <div class="footer-bottom-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
@@ -393,9 +493,9 @@
   <!-- Grain overlay -->
   <svg class="grain-overlay" width="100%" height="100%">
     <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
     </filter>
-    <rect width="100%" height="100%" filter="url(#noise)"/>
+    <rect width="100%" height="100%" filter="url(#noise)" />
   </svg>
 
   <!-- Lucide Icons -->
@@ -408,5 +508,51 @@
     });
   </script>
   <script src="js/main.js"></script>
+
+  <!-- Spline 3D Integration -->
+  <script type="module">
+    import { Application } from 'https://esm.sh/@splinetool/runtime';
+
+    // Hero Scene
+    const canvas = document.getElementById('canvas3d');
+    const loader = document.getElementById('spline-loader');
+
+    if (canvas) {
+      const spline = new Application(canvas);
+      // New Scene URL
+      const SCENE_URL = 'https://prod.spline.design/XtnSbszYxUBCLSJa/scene.splinecode';
+
+      spline.load(SCENE_URL).then(() => {
+        if (loader) loader.classList.add('hidden');
+        canvas.classList.add('loaded');
+      }).catch(err => {
+        console.error('Failed to load Hero Spline scene:', err);
+        if (loader) loader.classList.add('hidden');
+      });
+    }
+
+    // Parallax Scene
+    const parallaxCanvas = document.getElementById('parallax-canvas3d');
+    // Only load the second complex scene on larger screens (desktop/tablet) for performance
+    if (parallaxCanvas && window.innerWidth >= 768) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          const parallaxSpline = new Application(parallaxCanvas);
+          const PARALLAX_SCENE_URL = 'https://prod.spline.design/5nOOQYQvMZRRyWz8/scene.splinecode';
+
+          parallaxSpline.load(PARALLAX_SCENE_URL).then(() => {
+            parallaxCanvas.classList.add('loaded');
+          }).catch(err => {
+            console.error('Failed to load Parallax Spline scene:', err);
+          });
+          
+          observer.disconnect();
+        }
+      }, { rootMargin: '200px' });
+      
+      observer.observe(parallaxCanvas);
+    }
+  </script>
 </body>
+
 </html>
