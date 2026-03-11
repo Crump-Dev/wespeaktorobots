@@ -1616,3 +1616,17 @@ a[href*="spline.design"] {
 .parallax-spline.loaded {
   opacity: 0.6;
 }
+
+/* ── Mobile Overrides for Splines ── */
+@media (max-width: 767px) {
+  .hero-spline,
+  .spline-loader {
+    display: none !important;
+  }
+  
+  .parallax-spline {
+    /* Slightly scale down the Imagine This robot so it fits nicely on vertical screens */
+    transform: scale(0.65);
+    transform-origin: center;
+  }
+}
