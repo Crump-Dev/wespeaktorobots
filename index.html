@@ -533,8 +533,7 @@
 
     // Parallax Scene
     const parallaxCanvas = document.getElementById('parallax-canvas3d');
-    // Only load the second complex scene on larger screens (desktop/tablet) for performance
-    if (parallaxCanvas && window.innerWidth >= 768) {
+    if (parallaxCanvas) {
       const observer = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           const parallaxSpline = new Application(parallaxCanvas);
